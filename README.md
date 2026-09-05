@@ -136,3 +136,43 @@ Nunca suba:
 
 ## Entrega
 Realice `commit` y `push` de todos los archivos de código. Verifique nuevamente que las credenciales no estén presentes en el historial del repositorio.
+
+
+---
+
+## Respuestas al Cuestionario del Laboratorio
+
+### ¿Qué diferencia existe entre una tabla SQL y una colección MongoDB?
+Una tabla SQL guarda datos en filas y columnas con una estructura fija. Una colección MongoDB guarda documentos flexibles (tipo JSON) sin un esquema rígido.
+
+### ¿Qué representa un documento en MongoDB?
+Representa un registro individual de datos (equivalente a una fila en SQL), guardado en formato BSON/JSON con parejas de clave y valor.
+
+### ¿Cuál es la función del campo _id?
+Es el identificador único obligatorio para cada documento. Actúa como la clave primaria para evitar registros duplicados.
+
+### ¿Dónde se ejecuta Java cuando utiliza GitHub Codespaces?
+Se ejecuta en un contenedor virtual alojado en los servidores en la nube de GitHub, no en tu computadora local.
+
+### ¿Dónde se almacenan los datos cuando utiliza MongoDB Atlas?
+En los servidores de base de datos distribuidos en la nube gestionados por MongoDB.
+
+### ¿Qué función cumple el MongoDB Java Driver?
+Sirve como puente de comunicación para que el programa en Java pueda conectarse, enviar consultas y manipular datos en MongoDB Atlas.
+
+### ¿Qué ventaja representa utilizar una base de datos en la nube?
+Permite acceder a los datos desde cualquier lugar, ofrece copias de seguridad automáticas y no requiere instalar un servidor local.
+
+### ¿Por qué no debe almacenarse la contraseña dentro de App.java?
+Por seguridad. Si subes el archivo a un repositorio público como GitHub, cualquier persona podría ver la contraseña y vulnerar tu base de datos.
+
+### ¿Para qué se utiliza la variable de entorno MONGODB_URI?
+Para guardar la cadena de conexión cifrada (con credenciales y servidor) fuera del código fuente, protegiendo los datos sensibles.
+
+### Explique paso a paso el siguiente flujo de información: Usuario → Java → Codespaces → Java Driver → Internet → Atlas
+1. Usuario: Ingresa una acción en la terminal (ej. agregar un producto).
+2. Java: Procesa la orden dentro del código fuente de la aplicación.
+3. Codespaces: Ejecuta el entorno virtual que corre la máquina virtual de Java.
+4. Java Driver:Traduce las instrucciones de Java al lenguaje de consulta de MongoDB.
+5. Internet:Transmite la petición de forma segura a través de la red.
+6. Atlas: Recibe la consulta en la nube y guarda o devuelve los datos requeridos.
